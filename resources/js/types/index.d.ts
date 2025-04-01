@@ -17,10 +17,17 @@ export interface NavGroup {
 
 export interface NavItem {
     title: string;
-    menuItems : array;
+    href: string;
+    icon?: LucideIcon | null;
+    isActive?: boolean;
 }
 
-export interface ProfilNavItem {
+export interface CustomNavItem {
+    title: string;
+    menuItems: array;
+}
+
+export interface CustomMenuItemNavItem {
     title: string;
     href: string;
     icon?: LucideIcon | null;

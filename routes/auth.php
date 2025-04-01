@@ -36,6 +36,10 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+
+    Route::get('orders', [OrderController::class, 'create'])->name('order.create');
+
+    
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
@@ -54,9 +58,4 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
-
-
-
-    //
-    Route::get('orders', [OrderController::class, 'create'])->name('order.create');
 });

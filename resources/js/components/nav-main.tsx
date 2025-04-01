@@ -1,35 +1,23 @@
-import { SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import { Link, usePage } from '@inertiajs/react';
 import React from 'react';
+import { SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
+import { type CustomNavItem , type CustomMenuItemNavItem  } from '@/types';
+import { Link, usePage } from '@inertiajs/react';
 
-// Définir les types correctement
-interface MenuItem {
-  title: string;
-  href: string;
-  icon?: React.ComponentType;
-}
-
-interface NavItem {
-  title: string;
-  menuItems: MenuItem[];
-}
-
-export function NavMain({ items = [] }: { items: NavItem[] }) {
-  const { url } = usePage().props;
-  
-  return (
-    <SidebarGroup className="px-2 py-0">
+export function NavMain({ items = [] }: { items: CustomNavItem[] }) {
+    const page = usePage();
+    return (
+        <SidebarGroup className="px-2 py-0">
       {items.map((item) => (
         <React.Fragment key={item.title}>
           <SidebarGroupLabel className="uppercase">
             {item.title}
           </SidebarGroupLabel>
           <SidebarMenu>
-            {item.menuItems.map((menuItem: MenuItem) => (
+            {item.menuItems.map((menuItem: CustomMenuItemNavItem) => (
               <SidebarMenuItem key={menuItem.title}>
                 <SidebarMenuButton
                   asChild
-                  isActive={menuItem.href === url}
+                  isActive={menuItem.href === page.url}
                   tooltip={{ content: menuItem.title }}
                 >
                   <Link href={menuItem.href} prefetch>
@@ -43,5 +31,5 @@ export function NavMain({ items = [] }: { items: NavItem[] }) {
         </React.Fragment>
       ))}
     </SidebarGroup>
-  );
+    );
 }
