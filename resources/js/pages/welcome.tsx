@@ -7,9 +7,6 @@ import { LoaderCircle } from 'lucide-react';
 import InputError from '@/components/input-error';
 import WebsiteLayout from '@/layouts/website/websiteLayout';
 
-
-
-
 type BookRequestForm = {
     first_name: string;
     last_name: string;

@@ -2,9 +2,9 @@ import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import { type NavItem } from '@/types';
+import { type ProfilNavItem, type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen ,  Home, User, Package, Book, FileText } from 'lucide-react';
+import { BookOpen, Folder,  Home, User, Package, Book, FileText } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -14,12 +14,12 @@ const mainNavItems: NavItem[] = [
             {
                 title: 'Dashboard',
                 href: '/dashboard',
-                icon: Home, // Icône de la maison pour le Dashboard
+                icon: Home, 
             },
             {
                 title: 'Profil',
                 href: '/settings/profile',
-                icon: User, // Icône d'utilisateur pour le profil
+                icon: User,
             },
         ],
     },
@@ -29,12 +29,12 @@ const mainNavItems: NavItem[] = [
             {
                 title: 'Commandes',
                 href: '/orders',
-                icon: Package, // Icône de paquet pour la gestion des commandes
+                icon: Package, 
             },
             {
                 title: 'Livres',
                 href: '/books',
-                icon: Book, // Icône de livre pour la gestion des livres
+                icon: Book, 
             },
         ],
     },
@@ -44,34 +44,34 @@ const mainNavItems: NavItem[] = [
             {
                 title: 'Genre de livre',
                 href: '/book-gender',
-                icon: FileText, // Icône de texte pour genre de livre
+                icon: FileText, 
             },
             {
                 title: 'Type de livre',
                 href: '/booK-type',
-                icon: BookOpen, // Icône d'engrenage pour les paramètres
+                icon: BookOpen, 
             },
         ],
     },
 ];
 
-const footerNavItems: NavItem[] = [
-    // {
-    //     title: 'Repository',
-    //     href: 'https://github.com/laravel/react-starter-kit',
-    //     icon: Folder,
-    // },
-    // {
-    //     title: 'Documentation',
-    //     href: 'https://laravel.com/docs/starter-kits',
-    //     icon: BookOpen,
-    // },
+const footerNavItems: ProfilNavItem[] = [
+    {
+        title: 'Repository',
+        href: 'https://github.com/laravel/react-starter-kit',
+        icon: Folder,
+    },
+    {
+        title: 'Documentation',
+        href: 'https://laravel.com/docs/starter-kits',
+        icon: BookOpen,
+    },
 ];
 
 export function AppSidebar() {
     return (
         <Sidebar collapsible="icon" variant="inset">
-            <SidebarHeader>
+            {/* <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton size="lg" asChild>
@@ -81,14 +81,14 @@ export function AppSidebar() {
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                 </SidebarMenu>
-            </SidebarHeader>
+            </SidebarHeader> */}
 
             <SidebarContent>
                 <NavMain items={mainNavItems} />
             </SidebarContent>
 
             <SidebarFooter>
-                <NavFooter items={footerNavItems} className="mt-auto" />
+                {/* <NavFooter items={footerNavItems} className="mt-auto" /> */}
                 <NavUser />
             </SidebarFooter>
         </Sidebar>

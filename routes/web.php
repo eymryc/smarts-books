@@ -25,6 +25,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 //
 Route::post('books-requests', [BooksRequestController::class, 'store'])->name('books-requests');
+Route::get('books-requests', [BooksRequestController::class, 'getBooksRequest']);
+
+
+//
 Route::get('/about', [WebSiteController::class, 'about'])->name('about.create');
 Route::get('/contact', [WebSiteController::class, 'contact'])->name('contact.create');
 Route::get('/books', [WebSiteController::class, 'book'])->name('books.create');
