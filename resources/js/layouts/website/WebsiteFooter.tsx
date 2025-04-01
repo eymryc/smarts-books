@@ -7,7 +7,7 @@ export default function WebsiteFooter() {
            <div>
                <img src={Logo} alt="Logo" />
                <div className="mt-4">
-                   <p className="text-justify text-gray-500 text-sm">Nous sommes une équipe passionnée de littérature qui s&apos;efforce de vous offrir les meilleurs livres aux meilleurs prix.</p>
+                   <p className="text-justify text-gray-500 text-sm"> Nous sommes une équipe passionnée de littérature, prête à répondre à vos besoins et à vous livrer rapidement les ouvrages en Côte d'Ivoire et au Burkina Faso, au meilleur prix.</p>
                </div>
 
                <div className="flex flex-col mt-4 text-sm space-y-2">
@@ -42,9 +42,9 @@ export default function WebsiteFooter() {
                <h1 className="text-lg font-semibold mb-4">Liens Utiles</h1>
 
                <div>
-                   <ul className="flex flex-col space-y-2 text-gray-500">
+                    <ul className="flex flex-col space-y-2 text-gray-500">
                        <li className="hover:text-red-500 cursor-pointer transition-colors">Qui suis-je</li>
-                       <li className="hover:text-red-500 cursor-pointer transition-colors">Conditions générales de vente</li>
+                       <li className="hover:text-red-500 cursor-pointer transition-colors">Nos Livres disponibles</li>
                        <li className="hover:text-red-500 cursor-pointer transition-colors">Politique de confidentialité</li>
                        <li className="hover:text-red-500 cursor-pointer transition-colors">FAQ</li>
                        <li className="hover:text-red-500 cursor-pointer transition-colors">Nous contacter</li>

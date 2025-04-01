@@ -32,19 +32,10 @@ export default function WebsiteHeader() {
                      <div>
                         <img src={Logo} alt="Logo" />
                      </div>
-                     <div className="w-full md:w-96">
-                        <div className="flex items-center bg-white pl-3 border border-gray-300 h-12">
-                           <input
-                              type="text"
-                              name="search"
-                              id="search"
-                              placeholder="Rechercher un livre..."
-                              className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                           />
-                           <div className="grid shrink-0 grid-cols-1 focus-within:relative h-full">
-                              <button className="bg-red-500 px-3 text-white hover:bg-red-600 transition-colors">
-                                 Rechercher
-                              </button>
+                     <div className="w-full md:w-1/2">
+                        <div className="flex items-center bg-white pl-4 h-16">
+                           <div className="text-center text-red-500 font-bold px-4">
+                                 Pour toutes vos commandes de livres. Notre équipe vous contactera après votre commande pour vous confirmer les modalités de livraison.
                            </div>
                         </div>
                      </div>

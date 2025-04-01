@@ -16,6 +16,9 @@ export default function About() {
                En parallèle de ses recherches, Monsieur Kramo intervient en tant qu'enseignant vacataire à l'Université d'Orléans, où il transmet ses connaissances et son expertise en géographie physique et en biogéographie. Son engagement dans l'enseignement lui permet de partager sa passion pour la discipline tout en accompagnant les étudiants dans leur apprentissage des enjeux environnementaux contemporains.
 
                Son parcours témoigne de son ambition à renforcer les liens académiques et scientifiques entre l'Afrique et l'Europe, tout en apportant des solutions concrètes aux défis environnementaux mondiaux.
+
+               Enseignants, chercheurs, étudiants, professionnels, etc, nous sommes là pour toutes vos commandes de livres. Notre équipe vous contactera après votre commande pour vous confirmer les modalités de livraison.
+               
             </div>
          </div>
 
